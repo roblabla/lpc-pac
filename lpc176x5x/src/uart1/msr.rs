@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::MSR>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DCTS_A {
     #[doc = "0: No change detected on modem input, CTS."]
-    NO_CHANGE_DETECTED_O,
+    NO_CHANGE_DETECTED_O = 0,
     #[doc = "1: State change detected on modem input, CTS."]
-    STATE_CHANGE_DETECTE,
+    STATE_CHANGE_DETECTE = 1,
 }
 impl From<DCTS_A> for bool {
     #[inline(always)]
     fn from(variant: DCTS_A) -> Self {
-        match variant {
-            DCTS_A::NO_CHANGE_DETECTED_O => false,
-            DCTS_A::STATE_CHANGE_DETECTE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DCTS`"]
@@ -43,17 +40,14 @@ impl DCTS_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DDSR_A {
     #[doc = "0: No change detected on modem input, DSR."]
-    NO_CHANGE_DETECTED_O,
+    NO_CHANGE_DETECTED_O = 0,
     #[doc = "1: State change detected on modem input, DSR."]
-    STATE_CHANGE_DETECTE,
+    STATE_CHANGE_DETECTE = 1,
 }
 impl From<DDSR_A> for bool {
     #[inline(always)]
     fn from(variant: DDSR_A) -> Self {
-        match variant {
-            DDSR_A::NO_CHANGE_DETECTED_O => false,
-            DDSR_A::STATE_CHANGE_DETECTE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DDSR`"]
@@ -82,17 +76,14 @@ impl DDSR_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TERI_A {
     #[doc = "0: No change detected on modem input, RI."]
-    NO_CHANGE_DETECTED_O,
+    NO_CHANGE_DETECTED_O = 0,
     #[doc = "1: Low-to-high transition detected on RI."]
-    LOW_TO_HIGH_TRANSITI,
+    LOW_TO_HIGH_TRANSITI = 1,
 }
 impl From<TERI_A> for bool {
     #[inline(always)]
     fn from(variant: TERI_A) -> Self {
-        match variant {
-            TERI_A::NO_CHANGE_DETECTED_O => false,
-            TERI_A::LOW_TO_HIGH_TRANSITI => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `TERI`"]
@@ -121,17 +112,14 @@ impl TERI_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DDCD_A {
     #[doc = "0: No change detected on modem input, DCD."]
-    NO_CHANGE_DETECTED_O,
+    NO_CHANGE_DETECTED_O = 0,
     #[doc = "1: State change detected on modem input, DCD."]
-    STATE_CHANGE_DETECTE,
+    STATE_CHANGE_DETECTE = 1,
 }
 impl From<DDCD_A> for bool {
     #[inline(always)]
     fn from(variant: DDCD_A) -> Self {
-        match variant {
-            DDCD_A::NO_CHANGE_DETECTED_O => false,
-            DDCD_A::STATE_CHANGE_DETECTE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `DDCD`"]

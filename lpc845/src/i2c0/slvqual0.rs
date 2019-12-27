@@ -14,17 +14,14 @@ impl crate::ResetValue for super::SLVQUAL0 {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum QUALMODE0_A {
     #[doc = "0: Mask. The SLVQUAL0 field is used as a logical mask for matching address 0."]
-    MASK,
+    MASK = 0,
     #[doc = "1: Extend. The SLVQUAL0 field is used to extend address 0 matching in a range of addresses."]
-    EXTEND,
+    EXTEND = 1,
 }
 impl From<QUALMODE0_A> for bool {
     #[inline(always)]
     fn from(variant: QUALMODE0_A) -> Self {
-        match variant {
-            QUALMODE0_A::MASK => false,
-            QUALMODE0_A::EXTEND => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `QUALMODE0`"]

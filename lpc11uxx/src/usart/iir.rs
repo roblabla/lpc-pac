@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::IIR>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum INTSTATUS_A {
     #[doc = "0: At least one interrupt is pending."]
-    PENDING,
+    PENDING = 0,
     #[doc = "1: No interrupt is pending."]
-    NONE,
+    NONE = 1,
 }
 impl From<INTSTATUS_A> for bool {
     #[inline(always)]
     fn from(variant: INTSTATUS_A) -> Self {
-        match variant {
-            INTSTATUS_A::PENDING => false,
-            INTSTATUS_A::NONE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `INTSTATUS`"]
@@ -41,28 +38,23 @@ impl INTSTATUS_R {
 }
 #[doc = "Interrupt identification. IER\\[3:1\\] identifies an interrupt corresponding to the USART Rx FIFO. All other values of IER\\[3:1\\] not listed below are reserved.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum INTID_A {
     #[doc = "3: 1   - Receive Line Status (RLS)."]
-    RECEIVE_LINE_STATUS,
+    RECEIVE_LINE_STATUS = 3,
     #[doc = "2: 2a - Receive Data Available (RDA)."]
-    RECEIVE_DATA_AVAILABLE,
+    RECEIVE_DATA_AVAILABLE = 2,
     #[doc = "6: 2b - Character Time-out Indicator (CTI)."]
-    CHARACTER_TIMEOUT_INDICATOR,
+    CHARACTER_TIMEOUT_INDICATOR = 6,
     #[doc = "1: 3   - THRE Interrupt."]
-    THRE_INTERRUPT,
+    THRE_INTERRUPT = 1,
     #[doc = "0: 4   - Modem status"]
-    MODEM_STATUS,
+    MODEM_STATUS = 0,
 }
 impl From<INTID_A> for u8 {
     #[inline(always)]
     fn from(variant: INTID_A) -> Self {
-        match variant {
-            INTID_A::RECEIVE_LINE_STATUS => 3,
-            INTID_A::RECEIVE_DATA_AVAILABLE => 2,
-            INTID_A::CHARACTER_TIMEOUT_INDICATOR => 6,
-            INTID_A::THRE_INTERRUPT => 1,
-            INTID_A::MODEM_STATUS => 0,
-        }
+        variant as _
     }
 }
 #[doc = "Reader of field `INTID`"]

@@ -14,17 +14,14 @@ impl crate::ResetValue for super::TCR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CEN_A {
     #[doc = "0: Disabled.The counters are disabled."]
-    DISABLED,
+    DISABLED = 0,
     #[doc = "1: Enabled. The Timer Counter and Prescale Counter are enabled."]
-    ENABLED,
+    ENABLED = 1,
 }
 impl From<CEN_A> for bool {
     #[inline(always)]
     fn from(variant: CEN_A) -> Self {
-        match variant {
-            CEN_A::DISABLED => false,
-            CEN_A::ENABLED => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CEN`"]
@@ -92,17 +89,14 @@ impl<'a> CEN_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CRST_A {
     #[doc = "0: Disabled. Do nothing."]
-    DISABLED,
+    DISABLED = 0,
     #[doc = "1: Enabled. The Timer Counter and the Prescale Counter are synchronously reset on the next positive edge of the APB bus clock. The counters remain reset until TCR\\[1\\] is returned to zero."]
-    ENABLED,
+    ENABLED = 1,
 }
 impl From<CRST_A> for bool {
     #[inline(always)]
     fn from(variant: CRST_A) -> Self {
-        match variant {
-            CRST_A::DISABLED => false,
-            CRST_A::ENABLED => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `CRST`"]

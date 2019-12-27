@@ -14,17 +14,14 @@ impl crate::ResetValue for super::CR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMSEL2_A {
     #[doc = "0: Single edge controlled mode is selected."]
-    SINGLE_EDGE_CONTROLL,
+    SINGLE_EDGE_CONTROLL = 0,
     #[doc = "1: Double edge controlled mode is selected."]
-    DOUBLE_EDGE_CONTROLL,
+    DOUBLE_EDGE_CONTROLL = 1,
 }
 impl From<PWMSEL2_A> for bool {
     #[inline(always)]
     fn from(variant: PWMSEL2_A) -> Self {
-        match variant {
-            PWMSEL2_A::SINGLE_EDGE_CONTROLL => false,
-            PWMSEL2_A::DOUBLE_EDGE_CONTROLL => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMSEL2`"]
@@ -92,17 +89,14 @@ impl<'a> PWMSEL2_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMSEL3_A {
     #[doc = "0: Single edge controlled mode is selected."]
-    SINGLE_EDGE_CONTROLL,
+    SINGLE_EDGE_CONTROLL = 0,
     #[doc = "1: Double edge controlled mode is selected."]
-    DOUBLE_EDGE_CONTROLL,
+    DOUBLE_EDGE_CONTROLL = 1,
 }
 impl From<PWMSEL3_A> for bool {
     #[inline(always)]
     fn from(variant: PWMSEL3_A) -> Self {
-        match variant {
-            PWMSEL3_A::SINGLE_EDGE_CONTROLL => false,
-            PWMSEL3_A::DOUBLE_EDGE_CONTROLL => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMSEL3`"]
@@ -170,17 +164,14 @@ impl<'a> PWMSEL3_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMSEL4_A {
     #[doc = "0: Single edge controlled mode is selected."]
-    SINGLE_EDGE_CONTROLL,
+    SINGLE_EDGE_CONTROLL = 0,
     #[doc = "1: Double edge controlled mode is selected."]
-    DOUBLE_EDGE_CONTROLL,
+    DOUBLE_EDGE_CONTROLL = 1,
 }
 impl From<PWMSEL4_A> for bool {
     #[inline(always)]
     fn from(variant: PWMSEL4_A) -> Self {
-        match variant {
-            PWMSEL4_A::SINGLE_EDGE_CONTROLL => false,
-            PWMSEL4_A::DOUBLE_EDGE_CONTROLL => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMSEL4`"]
@@ -248,17 +239,14 @@ impl<'a> PWMSEL4_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMSEL5_A {
     #[doc = "0: Single edge controlled mode is selected."]
-    SINGLE_EDGE_CONTROLL,
+    SINGLE_EDGE_CONTROLL = 0,
     #[doc = "1: Double edge controlled mode is selected."]
-    DOUBLE_EDGE_CONTROLL,
+    DOUBLE_EDGE_CONTROLL = 1,
 }
 impl From<PWMSEL5_A> for bool {
     #[inline(always)]
     fn from(variant: PWMSEL5_A) -> Self {
-        match variant {
-            PWMSEL5_A::SINGLE_EDGE_CONTROLL => false,
-            PWMSEL5_A::DOUBLE_EDGE_CONTROLL => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMSEL5`"]
@@ -326,17 +314,14 @@ impl<'a> PWMSEL5_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMSEL6_A {
     #[doc = "0: Single edge controlled mode is selected."]
-    SINGLE_EDGE_CONTROLL,
+    SINGLE_EDGE_CONTROLL = 0,
     #[doc = "1: Double edge controlled mode is selected."]
-    DOUBLE_EDGE_CONTROLL,
+    DOUBLE_EDGE_CONTROLL = 1,
 }
 impl From<PWMSEL6_A> for bool {
     #[inline(always)]
     fn from(variant: PWMSEL6_A) -> Self {
-        match variant {
-            PWMSEL6_A::SINGLE_EDGE_CONTROLL => false,
-            PWMSEL6_A::DOUBLE_EDGE_CONTROLL => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMSEL6`"]
@@ -404,17 +389,14 @@ impl<'a> PWMSEL6_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMENA1_A {
     #[doc = "0: The PWM output is disabled."]
-    THE_PWM_OUTPUT_IS_DI,
+    THE_PWM_OUTPUT_IS_DI = 0,
     #[doc = "1: The PWM output is enabled."]
-    THE_PWM_OUTPUT_IS_EN,
+    THE_PWM_OUTPUT_IS_EN = 1,
 }
 impl From<PWMENA1_A> for bool {
     #[inline(always)]
     fn from(variant: PWMENA1_A) -> Self {
-        match variant {
-            PWMENA1_A::THE_PWM_OUTPUT_IS_DI => false,
-            PWMENA1_A::THE_PWM_OUTPUT_IS_EN => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMENA1`"]
@@ -482,17 +464,14 @@ impl<'a> PWMENA1_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMENA2_A {
     #[doc = "0: The PWM output is disabled."]
-    THE_PWM_OUTPUT_IS_DI,
+    THE_PWM_OUTPUT_IS_DI = 0,
     #[doc = "1: The PWM output is enabled."]
-    THE_PWM_OUTPUT_IS_EN,
+    THE_PWM_OUTPUT_IS_EN = 1,
 }
 impl From<PWMENA2_A> for bool {
     #[inline(always)]
     fn from(variant: PWMENA2_A) -> Self {
-        match variant {
-            PWMENA2_A::THE_PWM_OUTPUT_IS_DI => false,
-            PWMENA2_A::THE_PWM_OUTPUT_IS_EN => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMENA2`"]
@@ -560,17 +539,14 @@ impl<'a> PWMENA2_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMENA3_A {
     #[doc = "0: The PWM output is disabled."]
-    THE_PWM_OUTPUT_IS_DI,
+    THE_PWM_OUTPUT_IS_DI = 0,
     #[doc = "1: The PWM output is enabled."]
-    THE_PWM_OUTPUT_IS_EN,
+    THE_PWM_OUTPUT_IS_EN = 1,
 }
 impl From<PWMENA3_A> for bool {
     #[inline(always)]
     fn from(variant: PWMENA3_A) -> Self {
-        match variant {
-            PWMENA3_A::THE_PWM_OUTPUT_IS_DI => false,
-            PWMENA3_A::THE_PWM_OUTPUT_IS_EN => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMENA3`"]
@@ -638,17 +614,14 @@ impl<'a> PWMENA3_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMENA4_A {
     #[doc = "0: The PWM output is disabled."]
-    THE_PWM_OUTPUT_IS_DI,
+    THE_PWM_OUTPUT_IS_DI = 0,
     #[doc = "1: The PWM output is enabled."]
-    THE_PWM_OUTPUT_IS_EN,
+    THE_PWM_OUTPUT_IS_EN = 1,
 }
 impl From<PWMENA4_A> for bool {
     #[inline(always)]
     fn from(variant: PWMENA4_A) -> Self {
-        match variant {
-            PWMENA4_A::THE_PWM_OUTPUT_IS_DI => false,
-            PWMENA4_A::THE_PWM_OUTPUT_IS_EN => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMENA4`"]
@@ -716,17 +689,14 @@ impl<'a> PWMENA4_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMENA5_A {
     #[doc = "0: The PWM output is disabled."]
-    THE_PWM_OUTPUT_IS_DI,
+    THE_PWM_OUTPUT_IS_DI = 0,
     #[doc = "1: The PWM output is enabled."]
-    THE_PWM_OUTPUT_IS_EN,
+    THE_PWM_OUTPUT_IS_EN = 1,
 }
 impl From<PWMENA5_A> for bool {
     #[inline(always)]
     fn from(variant: PWMENA5_A) -> Self {
-        match variant {
-            PWMENA5_A::THE_PWM_OUTPUT_IS_DI => false,
-            PWMENA5_A::THE_PWM_OUTPUT_IS_EN => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMENA5`"]
@@ -794,17 +764,14 @@ impl<'a> PWMENA5_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PWMENA6_A {
     #[doc = "0: The PWM output is disabled."]
-    THE_PWM_OUTPUT_IS_DI,
+    THE_PWM_OUTPUT_IS_DI = 0,
     #[doc = "1: The PWM output is enabled."]
-    THE_PWM_OUTPUT_IS_EN,
+    THE_PWM_OUTPUT_IS_EN = 1,
 }
 impl From<PWMENA6_A> for bool {
     #[inline(always)]
     fn from(variant: PWMENA6_A) -> Self {
-        match variant {
-            PWMENA6_A::THE_PWM_OUTPUT_IS_DI => false,
-            PWMENA6_A::THE_PWM_OUTPUT_IS_EN => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PWMENA6`"]

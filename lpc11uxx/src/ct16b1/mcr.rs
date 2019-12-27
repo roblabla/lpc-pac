@@ -14,17 +14,14 @@ impl crate::ResetValue for super::MCR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR0I_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR0I_A> for bool {
     #[inline(always)]
     fn from(variant: MR0I_A) -> Self {
-        match variant {
-            MR0I_A::ENABLED => true,
-            MR0I_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR0I`"]
@@ -92,17 +89,14 @@ impl<'a> MR0I_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR0R_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR0R_A> for bool {
     #[inline(always)]
     fn from(variant: MR0R_A) -> Self {
-        match variant {
-            MR0R_A::ENABLED => true,
-            MR0R_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR0R`"]
@@ -170,17 +164,14 @@ impl<'a> MR0R_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR0S_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR0S_A> for bool {
     #[inline(always)]
     fn from(variant: MR0S_A) -> Self {
-        match variant {
-            MR0S_A::ENABLED => true,
-            MR0S_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR0S`"]
@@ -248,17 +239,14 @@ impl<'a> MR0S_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR1I_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR1I_A> for bool {
     #[inline(always)]
     fn from(variant: MR1I_A) -> Self {
-        match variant {
-            MR1I_A::ENABLED => true,
-            MR1I_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR1I`"]
@@ -326,17 +314,14 @@ impl<'a> MR1I_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR1R_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR1R_A> for bool {
     #[inline(always)]
     fn from(variant: MR1R_A) -> Self {
-        match variant {
-            MR1R_A::ENABLED => true,
-            MR1R_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR1R`"]
@@ -404,17 +389,14 @@ impl<'a> MR1R_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR1S_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR1S_A> for bool {
     #[inline(always)]
     fn from(variant: MR1S_A) -> Self {
-        match variant {
-            MR1S_A::ENABLED => true,
-            MR1S_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR1S`"]
@@ -482,17 +464,14 @@ impl<'a> MR1S_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR2I_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR2I_A> for bool {
     #[inline(always)]
     fn from(variant: MR2I_A) -> Self {
-        match variant {
-            MR2I_A::ENABLED => true,
-            MR2I_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR2I`"]
@@ -560,17 +539,14 @@ impl<'a> MR2I_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR2R_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR2R_A> for bool {
     #[inline(always)]
     fn from(variant: MR2R_A) -> Self {
-        match variant {
-            MR2R_A::ENABLED => true,
-            MR2R_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR2R`"]
@@ -638,17 +614,14 @@ impl<'a> MR2R_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR2S_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR2S_A> for bool {
     #[inline(always)]
     fn from(variant: MR2S_A) -> Self {
-        match variant {
-            MR2S_A::ENABLED => true,
-            MR2S_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR2S`"]
@@ -716,17 +689,14 @@ impl<'a> MR2S_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR3I_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR3I_A> for bool {
     #[inline(always)]
     fn from(variant: MR3I_A) -> Self {
-        match variant {
-            MR3I_A::ENABLED => true,
-            MR3I_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR3I`"]
@@ -794,17 +764,14 @@ impl<'a> MR3I_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR3R_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR3R_A> for bool {
     #[inline(always)]
     fn from(variant: MR3R_A) -> Self {
-        match variant {
-            MR3R_A::ENABLED => true,
-            MR3R_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR3R`"]
@@ -872,17 +839,14 @@ impl<'a> MR3R_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MR3S_A {
     #[doc = "1: Enabled"]
-    ENABLED,
+    ENABLED = 1,
     #[doc = "0: Disabled"]
-    DISABLED,
+    DISABLED = 0,
 }
 impl From<MR3S_A> for bool {
     #[inline(always)]
     fn from(variant: MR3S_A) -> Self {
-        match variant {
-            MR3S_A::ENABLED => true,
-            MR3S_A::DISABLED => false,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `MR3S`"]

@@ -4,17 +4,14 @@ pub type R = crate::R<u32, super::LSR>;
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDR_A {
     #[doc = "0: The UART1 receiver FIFO is empty."]
-    EMPTY,
+    EMPTY = 0,
     #[doc = "1: The UART1 receiver FIFO is not empty."]
-    NOTEMPTY,
+    NOTEMPTY = 1,
 }
 impl From<RDR_A> for bool {
     #[inline(always)]
     fn from(variant: RDR_A) -> Self {
-        match variant {
-            RDR_A::EMPTY => false,
-            RDR_A::NOTEMPTY => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RDR`"]
@@ -43,17 +40,14 @@ impl RDR_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum OE_A {
     #[doc = "0: Overrun error status is inactive."]
-    INACTIVE,
+    INACTIVE = 0,
     #[doc = "1: Overrun error status is active."]
-    ACTIVE,
+    ACTIVE = 1,
 }
 impl From<OE_A> for bool {
     #[inline(always)]
     fn from(variant: OE_A) -> Self {
-        match variant {
-            OE_A::INACTIVE => false,
-            OE_A::ACTIVE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `OE`"]
@@ -82,17 +76,14 @@ impl OE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PE_A {
     #[doc = "0: Parity error status is inactive."]
-    INACTIVE,
+    INACTIVE = 0,
     #[doc = "1: Parity error status is active."]
-    ACTIVE,
+    ACTIVE = 1,
 }
 impl From<PE_A> for bool {
     #[inline(always)]
     fn from(variant: PE_A) -> Self {
-        match variant {
-            PE_A::INACTIVE => false,
-            PE_A::ACTIVE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `PE`"]
@@ -121,17 +112,14 @@ impl PE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FE_A {
     #[doc = "0: Framing error status is inactive."]
-    INACTIVE,
+    INACTIVE = 0,
     #[doc = "1: Framing error status is active."]
-    ACTIVE,
+    ACTIVE = 1,
 }
 impl From<FE_A> for bool {
     #[inline(always)]
     fn from(variant: FE_A) -> Self {
-        match variant {
-            FE_A::INACTIVE => false,
-            FE_A::ACTIVE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `FE`"]
@@ -160,17 +148,14 @@ impl FE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum BI_A {
     #[doc = "0: Break interrupt status is inactive."]
-    INACTIVE,
+    INACTIVE = 0,
     #[doc = "1: Break interrupt status is active."]
-    ACTIVE,
+    ACTIVE = 1,
 }
 impl From<BI_A> for bool {
     #[inline(always)]
     fn from(variant: BI_A) -> Self {
-        match variant {
-            BI_A::INACTIVE => false,
-            BI_A::ACTIVE => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `BI`"]
@@ -199,17 +184,14 @@ impl BI_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum THRE_A {
     #[doc = "0: THR contains valid data."]
-    VALID,
+    VALID = 0,
     #[doc = "1: THR is empty."]
-    THR_IS_EMPTY_,
+    THR_IS_EMPTY_ = 1,
 }
 impl From<THRE_A> for bool {
     #[inline(always)]
     fn from(variant: THRE_A) -> Self {
-        match variant {
-            THRE_A::VALID => false,
-            THRE_A::THR_IS_EMPTY_ => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `THRE`"]
@@ -238,17 +220,14 @@ impl THRE_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TEMT_A {
     #[doc = "0: THR and/or the TSR contains valid data."]
-    VALID,
+    VALID = 0,
     #[doc = "1: THR and the TSR are empty."]
-    EMPTY,
+    EMPTY = 1,
 }
 impl From<TEMT_A> for bool {
     #[inline(always)]
     fn from(variant: TEMT_A) -> Self {
-        match variant {
-            TEMT_A::VALID => false,
-            TEMT_A::EMPTY => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `TEMT`"]
@@ -277,17 +256,14 @@ impl TEMT_R {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RXFE_A {
     #[doc = "0: RBR contains no UART1 RX errors or FCR\\[0\\]=0."]
-    NOERROR,
+    NOERROR = 0,
     #[doc = "1: UART1 RBR contains at least one UART1 RX error."]
-    ERRORS,
+    ERRORS = 1,
 }
 impl From<RXFE_A> for bool {
     #[inline(always)]
     fn from(variant: RXFE_A) -> Self {
-        match variant {
-            RXFE_A::NOERROR => false,
-            RXFE_A::ERRORS => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `RXFE`"]

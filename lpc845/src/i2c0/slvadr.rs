@@ -14,17 +14,14 @@ impl crate::ResetValue for super::SLVADR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SADISABLE_A {
     #[doc = "0: Enabled. Slave Address n is enabled."]
-    ENABLED,
+    ENABLED = 0,
     #[doc = "1: Ignored Slave Address n is ignored."]
-    DISABLED,
+    DISABLED = 1,
 }
 impl From<SADISABLE_A> for bool {
     #[inline(always)]
     fn from(variant: SADISABLE_A) -> Self {
-        match variant {
-            SADISABLE_A::ENABLED => false,
-            SADISABLE_A::DISABLED => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Reader of field `SADISABLE`"]

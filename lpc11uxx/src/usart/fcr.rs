@@ -12,17 +12,14 @@ impl crate::ResetValue for super::FCR {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FIFOEN_AW {
     #[doc = "0: USART FIFOs are disabled. Must not be used in the application."]
-    DISABLED,
+    DISABLED = 0,
     #[doc = "1: Active high enable for both USART Rx and TX FIFOs and FCR\\[7:1\\] access. This bit must be set for proper USART operation. Any transition on this bit will automatically clear the USART FIFOs."]
-    ENABLED,
+    ENABLED = 1,
 }
 impl From<FIFOEN_AW> for bool {
     #[inline(always)]
     fn from(variant: FIFOEN_AW) -> Self {
-        match variant {
-            FIFOEN_AW::DISABLED => false,
-            FIFOEN_AW::ENABLED => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `FIFOEN`"]
@@ -68,17 +65,14 @@ impl<'a> FIFOEN_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RXFIFORES_AW {
     #[doc = "0: No impact on either of USART FIFOs."]
-    NO_IMPACT,
+    NO_IMPACT = 0,
     #[doc = "1: Writing a logic 1 to FCR\\[1\\] will clear all bytes in USART Rx FIFO, reset the pointer logic. This bit is self-clearing."]
-    CLEAR,
+    CLEAR = 1,
 }
 impl From<RXFIFORES_AW> for bool {
     #[inline(always)]
     fn from(variant: RXFIFORES_AW) -> Self {
-        match variant {
-            RXFIFORES_AW::NO_IMPACT => false,
-            RXFIFORES_AW::CLEAR => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `RXFIFORES`"]
@@ -124,17 +118,14 @@ impl<'a> RXFIFORES_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TXFIFORES_AW {
     #[doc = "0: No impact on either of USART FIFOs."]
-    NO_IMPACT,
+    NO_IMPACT = 0,
     #[doc = "1: Writing a logic 1 to FCR\\[2\\] will clear all bytes in USART TX FIFO, reset the pointer logic. This bit is self-clearing."]
-    CLEAR,
+    CLEAR = 1,
 }
 impl From<TXFIFORES_AW> for bool {
     #[inline(always)]
     fn from(variant: TXFIFORES_AW) -> Self {
-        match variant {
-            TXFIFORES_AW::NO_IMPACT => false,
-            TXFIFORES_AW::CLEAR => true,
-        }
+        variant as u8 != 0
     }
 }
 #[doc = "Write proxy for field `TXFIFORES`"]
@@ -178,25 +169,21 @@ impl<'a> TXFIFORES_W<'a> {
 }
 #[doc = "RX Trigger Level. These two bits determine how many receiver USART FIFO characters must be written before an interrupt is activated.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
 pub enum RXTL_AW {
     #[doc = "0: Trigger level 0 (1 character or 0x01)."]
-    LEVEL0,
+    LEVEL0 = 0,
     #[doc = "1: Trigger level 1 (4 characters or 0x04)."]
-    LEVEL1,
+    LEVEL1 = 1,
     #[doc = "2: Trigger level 2 (8 characters or 0x08)."]
-    LEVEL2,
+    LEVEL2 = 2,
     #[doc = "3: Trigger level 3 (14 characters or 0x0E)."]
-    LEVEL3,
+    LEVEL3 = 3,
 }
 impl From<RXTL_AW> for u8 {
     #[inline(always)]
     fn from(variant: RXTL_AW) -> Self {
-        match variant {
-            RXTL_AW::LEVEL0 => 0,
-            RXTL_AW::LEVEL1 => 1,
-            RXTL_AW::LEVEL2 => 2,
-            RXTL_AW::LEVEL3 => 3,
-        }
+        variant as _
     }
 }
 #[doc = "Write proxy for field `RXTL`"]
